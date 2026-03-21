@@ -29,3 +29,9 @@ Defaults: output.png, weights 0.5/0.5, obstacle threshold 80 (pixels darker than
 Example — prioritize flatness:
 
     ./lander terrain.png result.png 0.8 0.2 80
+
+## Notes
+
+terrain.png is a rough model of terrain, where the darker regions represent higher elevations/obstacles
+
+result.png is the product of the analyzer
