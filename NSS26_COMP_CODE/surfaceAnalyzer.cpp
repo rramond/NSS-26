@@ -1,24 +1,3 @@
-/*
- * lander.cpp — Optimal Vertical Landing Site Analyzer
- *
- * Reads a PNG heightmap (brightness = elevation) and finds the best
- * vertical landing zone based on:
- *   1. Flattest terrain  — minimized via Sobel gradient magnitude
- *   2. Distance from edges/obstacles — maximized via BFS distance transform
- *
- * Score at each pixel:
- *   score(x,y) = w_flat * (1 - slope_norm) + w_dist * dist_norm
- *
- * Output:
- *   - Prints best (x, y) and score to stdout
- *   - Saves annotated PNG with crosshair + heatmap overlay
- *
- * Build:
- *   g++ -O2 -o lander lander.cpp -lpng
- *
- * Usage:
- *   ./lander <input.png> [output.png] [w_flat] [w_dist] [obstacle_threshold]
- */
 
 #include <png.h>
 #include <cstdint>
